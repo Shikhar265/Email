@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Fields for <%= formTitle %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form: <%= formTitle %></h1>
+    <form action="/save-fields" method="POST">
+      <div class="form-group">
+        <label for="fields">Enter fields (comma-separated):</label>
+        <input type="text" id="fields" name="fields" placeholder="e.g., Name, Age, Email" required>
+      </div>
+      <button type="submit">Create Form</button>
+    </form>
+  </div>
+</body>
+</html>

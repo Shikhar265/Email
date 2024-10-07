@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill Form: <%= formTitle %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fill the Form: <%= formTitle %></h1>
+
+    <form action="/submit-form/<%= formTitle %>" method="POST">
+      <% formFields.forEach(function(field) { %>
+        <div class="form-group">
+          <label for="<%= field %>"><%= field %></label>
+          <input type="text" id="<%= field %>" name="<%= field %>" placeholder="Enter <%= field %>" required>
+        </div>
+      <% }) %>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
